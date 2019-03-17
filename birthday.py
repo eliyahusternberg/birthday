@@ -5,7 +5,7 @@ def print_header():
     print('           BIRTHDAY APP')
     print('---------------------------')
     print()
-
+#getting birthday from user
 def get_birthday_from_user():
     print('When were you born? ')
     year = int(input('Year [YYYY]: '))
@@ -14,13 +14,13 @@ def get_birthday_from_user():
 
     birthday = datetime.date(year, month, day)
     return birthday
-
+#computing how many days your birthday was or will be
 def compute_days_between_dates(original_date, target_date):
     this_year = datetime.date(target_date.year,original_date.month, original_date.day )
 
     dt = this_year - target_date
     return dt.days
-
+#print out how many days birthday will be in or how may days it was if your birthday wishing you a happy birthday
 def print_birthday_informatoin(days):
    if days < 0:
        print('You had your birthday  {} days ago this year' .format(-days))
